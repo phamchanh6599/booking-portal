@@ -13,15 +13,15 @@ const BookingSchema = new Schema({
   },
   date_time_1: {
     type: Date,
-    required: true,
+    default: Date.now,
   },
   date_time_2: {
     type: Date,
-    required: true,
+    default: Date.now,
   },
   date_time_3: {
     type: Date,
-    required: true,
+    default: Date.now,
   },
   status: {
     type: String,
