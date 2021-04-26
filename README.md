@@ -1,15 +1,17 @@
 # booking-portal
 
 ## CLIENT :
-1. Run `yarn` to install client.
-2. Run `yarn start` to run client.
+1. cd `client` from root folder.
+2. Run `yarn` to install client.
+3. Run `yarn start` to run client.
 
 + Reactjs + Redux to create client and manage state.
 
 
 ## SERVER :
-1. Run `yarn` to install server.
-2. Run `yarn server` to run server.
+1. cd `server` from root folder.
+2. Run `yarn` to install server.
+3. Run `yarn server` to run server.
 
 + Node js + Express to create API.
 + Joi to validate input from client.
