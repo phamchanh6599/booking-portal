@@ -1,0 +1,33 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "ADMIN_2@gmail.com",
+    "password": "1234567",
+    "role": "ADMIN"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "ADMIN_1@gmail.com",
+  "password": "1234567"
+}
+
+###
+GET http://localhost:5000/api/booking/all
+Content-Type: application/json
+
+###
+POST http://localhost:5000/api/booking
+Content-Type: application/json
+
+{
+  "type": "React",
+  "location": "React",
+  "date_time_1": "2021-04-26T09:57:09.121+00:00",
+  "date_time_2": "2021-06-26T09:57:09.121+00:00",
+  "date_time_3": "2021-05-26T09:57:09.121+00:00",
+}
