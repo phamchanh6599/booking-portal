@@ -1,4 +1,4 @@
-# booking-portal
+# Booking Portal
 
 ## CLIENT :
 1. cd `client` from root folder.
