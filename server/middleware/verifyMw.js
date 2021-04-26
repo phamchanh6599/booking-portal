@@ -1,4 +1,13 @@
 const jwt = require('jsonwebtoken');
+const User = require('../model/User');
+
+const verifyRole = () => async (req, res, next) => {
+  const user = await User.findById(req.userId)
+  const { role } = user;
+
+  if (role === 'ADMIN') next();
+  else return res.status(401).json({ success: false, message: 'You dont have permission!' })
+}
 
 const verifySchema = (schema) => (req, res, next) => {
   const { error } = schema.validate(req.body);
@@ -32,4 +41,4 @@ const verifyToken = () => (req, res, next) => {
   }
 };
 
-module.exports = { verifySchema, verifyToken };
+module.exports = { verifySchema, verifyToken, verifyRole };
