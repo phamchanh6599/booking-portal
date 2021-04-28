@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const { Schema } = mongoose
+const { Schema } = mongoose;
 
 const BookingSchema = new Schema({
   type: {
@@ -39,6 +39,6 @@ const BookingSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'users',
   },
-})
+});
 
-module.exports = mongoose.model('booking', BookingSchema)
+module.exports = mongoose.model('booking', BookingSchema);

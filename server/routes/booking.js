@@ -60,16 +60,15 @@ router.post(
   [verifyMw.verifyToken(), verifyMw.verifySchema(bookingSchemas.bookingSchemaPost)],
   async (req, res) => {
     const {
-      type, location, data_time_1, data_time_2, data_time_3,
+      type, location, date_time_1, date_time_2, date_time_3,
     } = req.body;
-
     try {
       const newBooking = new Booking({
         type,
         location,
-        data_time_1,
-        data_time_2,
-        data_time_3,
+        date_time_1,
+        date_time_2,
+        date_time_3,
         user: req.userId,
       });
 
@@ -86,7 +85,7 @@ router.post(
   },
 );
 
-// @route DELETE api/booking/update/:id
+// @route PUT api/booking/update/:id
 // @access Private
 router.put('/update/:id', [verifyMw.verifyToken(), verifyMw.verifyRole(), verifyMw.verifySchema(bookingSchemas.bookingSchemaUpdate)], async (req, res) => {
   try {

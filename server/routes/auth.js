@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 const express = require('express');
 
 const router = express.Router();
@@ -33,7 +34,6 @@ router.post('/register', async (req, res) => {
     await newUser.save();
     res.json({ success: true, message: 'Register successfully' });
   } catch (err) {
-    console.log(error);
     res.status(500).json({ success: false, message: 'Internal server error' });
   }
 });
@@ -73,6 +73,7 @@ router.post('/login', verifyMw.verifySchema(authSchemas.loginSchema), async (req
         message: 'Login successfully',
         accessToken,
         role: user.role,
+        username: user.username,
       });
   } catch (error) {
     console.log(error);

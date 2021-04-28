@@ -21,6 +21,7 @@ Content-Type: application/json
 ###
 GET http://localhost:5000/api/booking/all
 Content-Type: application/json
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU3NTg2MWEzNTYyYjI1NDMxYmEiLCJpYXQiOjE2MTk0NTI3MDN9.K5ALWSGPdEjWRryY9FoE6I5Jbl18_J0ymXgaM9qAFXI
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU1MDg2MWEzNTYyYjI1NDMxYjkiLCJpYXQiOjE2MTk0NTE1NTZ9.OWdY435-iq7eho-slGW_-b-JUMRzZ-vB3llLESoT15E
 ###
 POST http://localhost:5000/api/booking
@@ -28,12 +29,15 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU3NTg2MWEzNTYyYjI1NDMxYmEiLCJpYXQiOjE2MTk0NTI3MDN9.K5ALWSGPdEjWRryY9FoE6I5Jbl18_J0ymXgaM9qAFXI
 
 {
-  "type": "VUE",
-  "location": "AUS"
+  "date_time_1": "2021-04-14T13:25:27.000Z",
+  "date_time_2": "2021-05-01T13:25:27.000Z",
+  "date_time_3": "2021-04-01T13:25:27.000Z",
+  "location": "Paris",
+  "type": "Health Talk",
 }
 
 ###
-PUT http://localhost:5000/api/booking/update/6086e2faac15de7740ff79cf
+PUT http://localhost:5000/api/booking/update/6086e333ac15de7740ff79d3
 Content-Type: application/json
 # Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU3NTg2MWEzNTYyYjI1NDMxYmEiLCJpYXQiOjE2MTk0NTI3MDN9.K5ALWSGPdEjWRryY9FoE6I5Jbl18_J0ymXgaM9qAFXI
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU1MDg2MWEzNTYyYjI1NDMxYjkiLCJpYXQiOjE2MTk0NTE1NTZ9.OWdY435-iq7eho-slGW_-b-JUMRzZ-vB3llLESoT15E 
@@ -43,7 +47,17 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2O
 }
 
 ###
-DELETE http://localhost:5000/api/booking/cancel/6086e021159a26769511e709
-# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU1MDg2MWEzNTYyYjI1NDMxYjkiLCJpYXQiOjE2MTk0NTE1NTZ9.OWdY435-iq7eho-slGW_-b-JUMRzZ-vB3llLESoT15E
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU3NTg2MWEzNTYyYjI1NDMxYmEiLCJpYXQiOjE2MTk0NTI3MDN9.K5ALWSGPdEjWRryY9FoE6I5Jbl18_J0ymXgaM9qAFXI
+DELETE http://localhost:5000/api/booking/cancel/6086e2feac15de7740ff79d0
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU1MDg2MWEzNTYyYjI1NDMxYjkiLCJpYXQiOjE2MTk0NTE1NTZ9.OWdY435-iq7eho-slGW_-b-JUMRzZ-vB3llLESoT15E
+# Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU3NTg2MWEzNTYyYjI1NDMxYmEiLCJpYXQiOjE2MTk0NTI3MDN9.K5ALWSGPdEjWRryY9FoE6I5Jbl18_J0ymXgaM9qAFXI
 
+
+# USER 
+###
+GET http://localhost:5000/api/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDg2OGU1MDg2MWEzNTYyYjI1NDMxYjkiLCJpYXQiOjE2MTk0NTE1NTZ9.OWdY435-iq7eho-slGW_-b-JUMRzZ-vB3llLESoT15E
+
+
+# EVENT DROPDOWN
+###
+GET http://localhost:5000/api/event/all

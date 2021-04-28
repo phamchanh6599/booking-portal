@@ -1,0 +1,24 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es2021": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 12
+    },
+    "parser": "babel-eslint",
+    "rules": {
+        "camelcase": "off",
+        "consistent-return": "off",
+        "semi": 0,
+        "no-console": "off",
+        "import/prefer-default-export": "off",
+        "no-unused-vars": "off",
+        "jsx-quotes": [2, "prefer-single"],
+        "object-curly-newline": ["error", {"multiline": true}]
+    }
+}

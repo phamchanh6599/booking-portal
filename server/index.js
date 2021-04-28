@@ -5,6 +5,8 @@ const cors = require('cors');
 
 const authRouter = require('./routes/auth');
 const bookingRouter = require('./routes/booking');
+const userRouter = require('./routes/user');
+const typeEventRouter = require('./routes/typeOfEvent');
 
 (async () => {
   try {
@@ -31,5 +33,7 @@ app.use(cors());
 
 app.use('/api/auth', authRouter);
 app.use('/api/booking', bookingRouter);
+app.use('/api', userRouter);
+app.use('/api/event', typeEventRouter);
 
 app.listen(process.env.PORT, () => console.log(`Server started on port ${process.env.PORT}`));
